@@ -16,7 +16,6 @@ echo " <!Doctype html>
 	color: black;
 	}
 	div {
-	padding: 4px;
 	text-align: center;
 	background: black;
         color: white;
