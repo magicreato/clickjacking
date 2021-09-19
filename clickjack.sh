@@ -3,7 +3,7 @@
 echo ""
 read -p "Enter Domain Name : " dom
 #html code
-	echo ""
+echo ""
 clickjack () {
 #writing to cj.html file
 echo " <!Doctype html>
@@ -26,10 +26,10 @@ echo " <!Doctype html>
     	}
 	</style>
 	<body>
-	<h1><u>Check Website clickjacking vulnerability</u></h1><div>
-	<p>*Note:If the input website shows inside the box its vulnerable to clickjacking.</p><br>
+	<h1><u>Check Website clickjacking vulnerability</u></h1>
+	<p>*Note:If the input website shows inside the box its vulnerable to clickjacking.</p><br><div>
 	<iframe src="https://$dom" height="500" width="800" alt="Entered_website"><p>This website is not vulnerable</p></iframe>
-	<p>- Task completed press "ctrl+c" to exit-</p></div>
+	<p>- Task completed -</p></div>
 	</body>
 	</html> " > cj.html
 }
@@ -39,11 +39,11 @@ echo " <!Doctype html>
 #Executing command
 if [[ -z $dom ]]; then
 	echo "invalid syntax. please provide domain name"
-	echo "Eg: $dom example.com"
+	echo "Eg: example.com"
 else
 	clickjack
 	open cj.html
-	echo "--Task completed--"
+	echo "--Task completed press ctrl+c to exit--"
 fi
 #Exiting
 exit 0
